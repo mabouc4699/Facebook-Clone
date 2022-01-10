@@ -1,16 +1,17 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
+require("dotenv").config();
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBYEbVVKwuuVnLNhBl6HvWMJ5Rk7UaU4QI",
-  authDomain: "facebook-clone-3a014.firebaseapp.com",
-  projectId: "facebook-clone-3a014",
-  storageBucket: "facebook-clone-3a014.appspot.com",
-  messagingSenderId: "822023231912",
-  appId: "1:822023231912:web:593992c04b4598fa9fa59d",
-  measurementId: "G-13N6ZVV325",
+  apiKey: process.env.APIKEY,
+  authDomain: process.env.AUTHDOMAIN,
+  projectId: process.env.PROJECTID,
+  storageBucket: process.env.STORAGEBUCKET,
+  messagingSenderId: process.env.MESSAGINGSENDERID,
+  appId: process.env.APPID,
+  measurementId: process.env.MEASUREMENTID,
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
